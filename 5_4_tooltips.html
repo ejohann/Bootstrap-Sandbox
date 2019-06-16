@@ -97,20 +97,20 @@
     <br>
 
     <!-- TOOLTIPS WITH HTML -->
-    <button class="btn btn-primary"  data-toggle="tooltip" data-placement="top" data-html="true" title="<h3>Hello</h3><p>Hello world</p><p>Its Johanne</p>">Tooltip On With HTML</button>
+    <button id="hello" class="btn btn-primary"  data-toggle="tooltip" data-placement="top" data-html="true" title="<h3>Hello</h3><p>Hello world</p><p>Its Johanne</p>">Tooltip On With HTML</button>
 
     <hr>
 
     <!-- TRIGGER WITH JS -->
-    <button class="btn btn-secondary">
+    <button class="btn btn-secondary" onclick="showTooltip()">
       Show Tooltip
     </button>
 
-    <button class="btn btn-secondary">
+    <button class="btn btn-secondary" onclick="hideTooltip()">
       Hide Tooltip
     </button>
 
-    <button class="btn btn-secondary">
+    <button class="btn btn-secondary" onclick="toggleTooltip()">
       Toggle Tooltip
     </button>
 
@@ -127,6 +127,21 @@
   <script>
    // init tooltips
     $("[data-toggle = 'tooltip']").tooltip();
+
+    function showTooltip()
+     {
+       $("#hello").tooltip('show');
+     }
+
+     function hideTooltip()
+     {
+       $("#hello").tooltip('hide');
+     }
+
+     function toggleTooltip()
+     {
+       $("#hello").tooltip('toggle');
+     }
 
   </script>
 </body>
