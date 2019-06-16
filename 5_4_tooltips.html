@@ -97,7 +97,7 @@
     <br>
 
     <!-- TOOLTIPS WITH HTML -->
-    <button id="hello" class="btn btn-primary"  data-toggle="tooltip" data-placement="top" data-html="true" title="<h3>Hello</h3><p>Hello world</p><p>Its Johanne</p>">Tooltip On With HTML</button>
+    <button id="hello" class="btn btn-primary" data-toggle="tooltip" data-placement="top" data-html="true" title="<h3>Hello</h3><p>Hello world</p><p>Its Johanne</p>">Tooltip On With HTML</button>
 
     <hr>
 
@@ -142,6 +142,23 @@
      {
        $("#hello").tooltip('toggle');
      }
+     
+     //Tooltip events
+     $("#hello").on("show.bs.tooltip", function(){
+        console.log('Tooltip show');
+     });
+
+     $("#hello").on("shown.bs.tooltip", function(){
+        console.log('Tooltip shown');
+     });
+
+     $("#hello").on("hide.bs.tooltip", function(){
+        console.log('Tooltip hide');
+     });
+
+     $("#hello").on("hidden.bs.tooltip", function(){
+        console.log('Tooltip hidden');
+     });
 
   </script>
 </body>
